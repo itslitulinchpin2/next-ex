@@ -6,6 +6,12 @@ type Props = {
     }
 }
 
+// export function gernerateMetadata({params}:Props){
+//     return {
+//         title:`product name:${params.slug}`
+//     }
+// }
+
 export default function PantsPage({params}:Props){
     if(params.slug==='nothing'){
         notFound();
