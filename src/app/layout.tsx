@@ -25,6 +25,8 @@ export default function RootLayout({
 }>) {
   return (
 <>
+<html>
+  <body>
         <header className={styles.header}>
           <h1>Demo Note App</h1>
           <nav className={styles.nav}>
@@ -34,6 +36,8 @@ export default function RootLayout({
           </nav>
         </header>
         {children}
+        </body>
+        </html>
   </>
   
   );
