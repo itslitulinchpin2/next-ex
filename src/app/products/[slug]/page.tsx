@@ -1,5 +1,7 @@
+import GoProductsButton from '@/components/GoProductsButton';
 import { getProduct, getProducts } from '@/service/products';
-import { notFound } from 'next/navigation';
+import Image from 'next/image';
+import { notFound, redirect } from 'next/navigation';
 
 export const revalidate = 3;
 
@@ -23,11 +25,19 @@ export default async function ProductPage({params:{slug}}:Props){
     // const factText = data.data[0]
 
     if(!product){
-        notFound();
+        //notFound();
+        redirect('/products')
     }
+
+    if(product){
     return(
+        <>
+        <Image src={`/images/${product.image}`} alt={product.name} width="300" height={300}></Image>
         <h1>This is Products/{product.name} Page..</h1>
+        <GoProductsButton/>
+        </>
     )
+    }
 }
 
 export async function generateStaticParams(){

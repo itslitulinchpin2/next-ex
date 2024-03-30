@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import {notFound} from 'next/navigation';
 import Counter from '@/components/Counter';
+
 import os from 'os';
 export default function Home() {
   //notFound();

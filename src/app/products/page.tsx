@@ -18,7 +18,7 @@ export default async function ProductsPage(){
     return(
         <>
         <h1>This is ProductsPage..</h1>
-        <Image src={myImage} alt='myImage'></Image>
+        {/* <Image src={myImage} alt='myImage'></Image> */}
         <ul>
             {products.map((product,index)=>(
             <li key={index}>
