@@ -10,6 +10,8 @@ export default function Home() {
   <>
    <h1>This is a HomePage.</h1>
    <Counter></Counter>
+   <Image src="https://images.unsplash.com/photo-1441986300917-64674bd600d8"
+   alt='random' width={400} height={400}></Image>
    </>
   );
 }

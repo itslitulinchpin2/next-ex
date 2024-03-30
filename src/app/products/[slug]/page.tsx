@@ -18,9 +18,9 @@ type Props = {
 export default async function ProductPage({params:{slug}}:Props){
     //서버 파일에 있는 데이터 중 해당 제품의 정보를 찾아 그걸 보여줌
     const product = await getProduct(slug);
-    const res = await fetch('https://meowfacts.herokuapp.com')
-    const data = await res.json();
-    const factText = data.data[0]
+    // const res = await fetch('https://meowfacts.herokuapp.com')
+    // const data = await res.json();
+    // const factText = data.data[0]
 
     if(!product){
         notFound();
